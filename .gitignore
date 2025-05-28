@@ -1,12 +1,12 @@
-# General
+
 .DS_Store
 .env
 
-# Python backend
+
 backend/venv/
 backend/__pycache__/
 backend/*.pyc
 backend/.env
 
-# Node/Chrome (if added later)
+
 *.log
