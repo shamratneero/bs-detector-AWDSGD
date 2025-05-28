@@ -1,0 +1,7 @@
+# Python + Flask + venv
+venv/
+__pycache__/
+.env
+*.pyc
+*.pyo
+.DS_Store

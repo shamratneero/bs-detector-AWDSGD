@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "BS Detector for Facebook",
+  "version": "1.0",
+  "description": "Summarize long Facebook posts from specific groups and detect BS.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://www.facebook.com/groups/1301861637376057"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/groups/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "poopicon.jpg"
+  }
+}
