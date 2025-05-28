@@ -1,7 +1,7 @@
 console.log("✅ BS Detector active.");
 
 const MIN_LENGTH = 500;
-const API_URL = "http://127.0.0.1:5000/summarize";
+const API_URL = "https://web-production-1644b.up.railway.app/summarize";
 
 // Scan for long posts every 2 seconds
 setInterval(() => {

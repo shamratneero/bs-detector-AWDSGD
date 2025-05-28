@@ -20,11 +20,13 @@ limiter = Limiter(
     default_limits=["10 per minute"]
 )
 
-import openai
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# Initialize OpenAI client
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route("/summarize", methods=["POST"])
 @limiter.limit("5 per minute")
+
 def summarize():
     data = request.get_json()
     text = data.get("text", "")
@@ -34,7 +36,7 @@ def summarize():
 
     try:
         # Stronger Gen Z Banglish prompt
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             temperature=0.7,
             messages=[
@@ -83,4 +85,3 @@ def summarize():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
-
