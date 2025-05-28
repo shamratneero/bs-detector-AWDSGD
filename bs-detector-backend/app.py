@@ -4,24 +4,29 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+from flask_limiter.util import get_ipaddr
 
 
-# Load environment variables
+
+
 load_dotenv()
 
-# Initialize Flask app
+
 app = Flask(__name__)
 CORS(app)
 
+def real_ip():
+    return request.headers.get("X-Forwarded-For", request.remote_addr)
+
 limiter = Limiter(
-    get_remote_address,
+    key_func=real_ip,
     app=app,
     default_limits=["10 per minute"]
 )
 
 
-# Initialize OpenAI client
+
+
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route("/summarize", methods=["POST"])
