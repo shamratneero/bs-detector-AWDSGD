@@ -1,10 +1,8 @@
-Sure! Here's the full README content — ready for copy and paste into your `README.md` file:
-
 # 🧠 BS Detector — Facebook Drama Summarizer in Gen Z Banglish
 
 BS Detector is a fun and brutally honest Chrome extension that summarizes long, emotional Facebook group posts (like "Are We Dating the Same Guy?") into short, Gen Z-style Banglish summaries. It also gives each post a BS Meter 💩 score that reflects the drama level.
 
-No more scrolling through novels. Just read the vibe and bounce.
+No more scrolling through ajaira post. Just read the vibe and bounce.
 
 ---
 
@@ -18,7 +16,14 @@ No more scrolling through novels. Just read the vibe and bounce.
 
 ---
 
-## 🧑‍💻 How to Use
+## 🧑‍💻 How to Use? For Chrome:
+
+1. Download the latest release
+2. Go to chrome://extensions
+3. Turn on developer mode
+4. click on load unpacked
+5. Select the folder you have just downloaded
+6. Done!
 
 ### 1. Clone the Project
 
