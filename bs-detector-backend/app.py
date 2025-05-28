@@ -82,6 +82,8 @@ def summarize():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+    #adding a dummy comment to avoid empty response
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
